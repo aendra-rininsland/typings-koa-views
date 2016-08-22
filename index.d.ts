@@ -16,5 +16,7 @@ declare module 'koa-views' {
     render(view: string, locals?: {extension: string}): Promise<string>;
   }
 
+  namespace views {}
+
   export = views;
 }
