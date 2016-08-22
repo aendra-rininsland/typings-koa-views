@@ -1,0 +1,16 @@
+{
+  "name": "koa-views",
+  "main": "index.d.ts",
+  "homepage": "https://github.com/queckezz/koa-views#readme",
+  "version": "4.1.0",
+  "globalDevDependencies": {
+    "node": "registry:env/node#6.0.0+20160813135048"
+  },
+  "devDependencies": {
+    "blue-tape": "registry:npm/blue-tape#0.2.0+20160723033700"
+  },
+  "globalDependencies": {
+    "es6-promise": "registry:dt/es6-promise#0.0.0+20160614011821",
+    "koa": "registry:dt/koa#2.0.0+20160724024233"
+  }
+}
