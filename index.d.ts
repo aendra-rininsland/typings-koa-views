@@ -2,21 +2,22 @@
  * TypeScript definition for koa-views@next
  * 2016 Ændrew Rininsland
  */
-declare module 'koa-views' {
-  import * as Koa from 'koa';
 
+import * as Koa from 'koa';
+
+declare module 'koa-views' {
   function views(root: string, opts?: {
     extension?: string,
     map?: {
-      html: string;
+      [ext: string]: string;
     }
-  }): { (ctx: ViewsContext, next?: () => any): any };
-
-  interface ViewsContext extends Koa.Context {
-    render(view: string, locals?: {extension: string}): Promise<string>;
-  }
-
-  namespace views {}
+  }): { (ctx: KoaViews.Context, next?: () => any): any };
 
   export = views;
+}
+
+declare namespace KoaViews {
+  export interface Context extends Koa.Context {
+    render(view: string, locals?: {[key: string]: any}): Promise<string>;
+  }
 }
